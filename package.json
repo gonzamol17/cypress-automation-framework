@@ -1,0 +1,27 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "triggerAllTest-Other": "npx cypress run --spec cypress/e2e/other/*",
+    "triggerAllTest-headless": "npx cypress run",
+    "triggerAllTest-Automation-test-store": "npx cypress run --spec cypress/e2e/automation-test-store/*",
+    "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json"
+  },
+  "author": "Gonzalo Molina",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.14.0",
+    "cypress-multi-reporters": "^1.6.4",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "chai": "^5.1.0"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 1,
+    "failures": 0,
+    "start": "2024-03-31T09:13:18.269Z",
+    "end": "2024-03-31T09:13:34.393Z",
+    "duration": 16124,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 33.33333333333333,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "04d2a76a-f715-4514-80e6-f5ef19d37920",
+      "title": "",
+      "fullFile": "cypress\\e2e\\other\\same-origin-policy.js",
+      "file": "cypress\\e2e\\other\\same-origin-policy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15f50fb7-a6da-43e1-8336-0596712f854a",
+          "title": "Cypress web security",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate visiting two different domains",
+              "fullTitle": "Cypress web security Validate visiting two different domains",
+              "timedOut": null,
+              "duration": 10151,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://webdriveruniversity.com/\");\ncy.visit(\"https://automationteststore.com/\");",
+              "err": {},
+              "uuid": "bf686ae7-fc3a-448c-8146-5b6050f33f6c",
+              "parentUUID": "15f50fb7-a6da-43e1-8336-0596712f854a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate visiting two different domain via user actions",
+              "fullTitle": "Cypress web security Validate visiting two different domain via user actions",
+              "timedOut": null,
+              "duration": 4633,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://webdriveruniversity.com/\");\ncy.get('#automation-test-store').invoke('removeAttr', 'target').click();",
+              "err": {},
+              "uuid": "00e9b1ea-3a7b-4a54-8289-b154f284eb24",
+              "parentUUID": "15f50fb7-a6da-43e1-8336-0596712f854a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "origin command",
+              "fullTitle": "Cypress web security origin command",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.origin('webdriveruniversity.com', () => {\n  cy.visit(\"/\");\n});\ncy.origin('automationteststore.com', () => {\n  cy.visit(\"/\");\n});",
+              "err": {},
+              "uuid": "a517d18c-cce0-4062-be3f-ac03fc8492ec",
+              "parentUUID": "15f50fb7-a6da-43e1-8336-0596712f854a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bf686ae7-fc3a-448c-8146-5b6050f33f6c",
+            "00e9b1ea-3a7b-4a54-8289-b154f284eb24"
+          ],
+          "failures": [],
+          "pending": [
+            "a517d18c-cce0-4062-be3f-ac03fc8492ec"
+          ],
+          "skipped": [],
+          "duration": 14784,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
